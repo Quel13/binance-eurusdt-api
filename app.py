@@ -22,6 +22,11 @@ def binance_ws():
     )
     ws.run_forever()
 
+#nose
+@app.route("/", methods=["GET"])
+def home():
+    return "Binance WebSocket API is running", 200
+
 # Ruta API para obtener el último precio
 @app.route('/price', methods=['GET'])
 def get_price():
